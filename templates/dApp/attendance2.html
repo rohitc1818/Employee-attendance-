@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%extends 'dApp/Daboard4.html'%}
+    {%block Dablock4_block%}
+        <h1 align="center">Attendance Detail</h1><br><br><br><br>
+         <div class="container" align="center">
+           {%if Attendance_list%}
+              <table border="2">
+                  <thead>
+                     <th>E_no</th>
+                     <th>E_name</th>
+                     <th>In_time</th>
+                     <th>Out_time</th>
+                     <th>Description</th>
+                     <th>Actions</th>
+                  </thead>
+                  {%for Attendance in Attendance_list%}
+                     <tr>
+                         <td>{{Attendance.E_no}}</td>
+                         <td>{{Attendance.E_name}}</td>
+                         <td>{{Attendance.In_date}}</td>
+                         <td>{{Attendance.Out_date}}</td>
+                         <td>{{Attendance.Description}}</td>
+                         <td><a class="btn btn-default btn" href="/a_delete/{{Attendance.id}}">Delete</a></td>
+                     </tr>
+                  {% endfor %}
+              </table>
+           {% endif %}
+         </div><br>
+<h6 align="center">Copyrights@ 2020 All rights reserved</h6>
+    {%endblock%}

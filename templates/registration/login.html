@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{%extends 'dApp/base3.html'%}
+    {%block back_block%}<br><br><br><br><br><br>
+    <div class="jumbotron">
+        <div class="container" align="center">
+    <h1 id='d'>Login to Employee Attendance system...</h1>
+    <form method="post">
+        {{form.as_p}}
+        {%csrf_token%}
+        <button class="btn btn-default btn" type="submit">Login</button>
+    </form>
+        </div>
+    </div>
+    {%endblock%}

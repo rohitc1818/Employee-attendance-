@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%extends 'dApp/Daboard2.html'%}
+    {%block Dablock2_block%}
+    <h1 align="center">Employee Detail</h1><br>
+   <div class="container" align="center">
+     {% if Employee_list %}
+        <table border="2">
+            <thead>
+               <th>E_no</th>
+               <th>First_name</th>
+               <th>Last_name</th>
+               <th>E_salary</th>
+               <th>Contact_no</th>
+               <th>Email</th>
+               <th>Country</th>
+               <th>City</th>
+               <th>Pincode</th>
+               <th>Address</th>
+               <th>Actions</th>
+            </thead>
+            {% for Employee in Employee_list %}
+               <tr>
+                   <td>{{Employee.E_no}}</td>
+                   <td>{{Employee.First_name}}</td>
+                   <td>{{Employee.Last_name}}</td>
+                   <td>{{Employee.E_salary}}</td>
+                   <td>{{Employee.Contact_no}}</td>
+                   <td>{{Employee.Email}}</td>
+                   <td>{{Employee.Country}}</td>
+                   <td>{{Employee.City}}</td>
+                   <td>{{Employee.Pin_code}}</td>
+                   <td>{{Employee.Address}}</td>
+                   <td><a class="btn btn-default btn" href="/update/{{Employee.id}}">Update</a>&nbsp&nbsp&nbsp&nbsp
+                   <a class="btn btn-default btn" href="/delete/{{Employee.id}}">Delete</a></td>
+               </tr>
+            {% endfor %}
+        </table>
+     {% endif %}<br>
+   </div>
+  <h6 align="center">Copyrights@ 2020 All rights reserved</h6>
+    {%endblock%}

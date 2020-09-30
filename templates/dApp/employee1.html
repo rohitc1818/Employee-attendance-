@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{%extends 'dApp/Daboard1.html'%}
+    {%block Dablock1_block%}
+    <h1 align="center">Add Employee</h1>
+     <div class="container" align="center">
+       <div class="jumbotron">
+         <form method="post">
+             {{form.as_p}}
+             {%csrf_token%}
+             <input type="submit" class="btn btn-default btn" value="submit">
+         </form>
+       </div>
+     </div>
+<h6 align="center">Copyrights@ 2020 All rights reserved</h6>
+    {%endblock%}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%extends 'dApp/Dashboard.html'%}
+   {%block da_block%}
+     <h1>Employee Detail Update Form.</h1><hr><br><br><br>
+     <div class="jumbotron">
+         <div class="container" align="center">
+      <form method="post">
+          {%csrf_token%}
+          E_no:<input type="text" name="eno" value="{{Employee.E_no.value}}">
+          <p></p>
+          First_name:<input type="text" name="First_name" value="{{Employee.First_name.value}}">
+          <p></p>
+          Last_name:<input type="text" name="Last_name" value="{{Employee.Last_name.value}}">
+          <p></p>
+          E_salary:<input type="text" name="E_salary" value="{{Employee.E_salary.value}}">
+          <p></p>
+          Contact_no:<input type="text" name="Contact_no" value="{{Employee.Contact_no.value}}">
+          <p></p>
+          Email:<input type="text" name="Email" value="{{Employee.Email.value}}">
+          <p></p>
+          Country:<input type="text" name="Country" value="{{Employee.Country.value}}">
+          <p></p>
+          City:<input type="text" name="City" value="{{Employee.City.value}}">
+          <p></p>
+          Pin_code:<input type="text" name="Pin_code" value="{{Employee.Pin_code.value}}">
+          <p></p>
+          Address:<input type="text" name="Address" value="{{Employee.Address.value}}">
+          <p></p>
+          <input type="submit" class="btn btn-primary btn-lg" value="Update Record">
+      </form>
+         </div>
+     </div>
+   {%endblock%}

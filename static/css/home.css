@@ -1,0 +1,19 @@
+
+h1{
+text-align: left;
+height: 260px;
+width: 100%;
+background-color: powderblue;
+}
+span{
+font-size: 20px;
+}
+#head{
+text-align: center;
+padding:  15px 300px;
+}
+h5{
+background-color: powderblue;
+font-size: 20px;
+}
+
